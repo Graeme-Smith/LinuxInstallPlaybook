@@ -1,88 +1,153 @@
-### Install Linux Mint
+# Install Linux Mint
+Download ISO image
+Right click and create bootable USB
 
 ### Manual Setup of Ansible and git
 
 sudo apt-get install software-properties-common
 sudo apt-add-repository ppa:ansible/ansible
 sudo apt-get update
-sudo apt-get install ansibley
+sudo apt-get install ansible
 sudo apt-get install git
 
-### Run ansible playbook
+# Bash Utilities (Installed via Ansible)
 
-### Current list of changes
-
-# Setup .bashrc profile
-
-# Citrix Receivercitrix receiver
-
-# Bash Utilities
 | Bash Utility | Description | Status |
 |--------------|-------------|--------|
-| bioawk       |             |        |
 | docker       |             |        |
 | gparted      | Managing disk partitions            |        |
+| htop      | Managing disk partitions            |        |
 | jq           | Parsing JSON files            |        |
 | pavucontrol  |             |        |
 | python3-pip  |             |        |
 | tmux         |             |        |
 | tree         |             |        |
+| vim        |             |        |
+
+
+## Run ansible playbook
+ansible-galaxy install -r requirements.yml
+sudo ansible-playbook local.yml
+
+# Setup profiles
+
+## Setup .bashrc profile
+
+## Setup .vimrc
+
+### Current list of manual installation
+
+# Google Chrome
+Search for 'download google chrome' and follow instructions
+
+# Citrix Workspace
+I downloaded the deb file for Citrix Workspace app 2108 for Linux from https://www.citrix.com/en-gb/downloads/workspace-app/linux/workspace-app-for-linux-latest.html 
+
+For Citrix to work I needed to share the certificates used by FireFox:
+sudo ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts
+
+# Install Miniconda
+https://docs.conda.io/en/latest/miniconda.html#linux-installers
+bash $HOME/Downloads/Miniconda3-py39_4.10.3-Linux-x86_64.sh
+# Import conda environments from yml files TODO Redo these environments for python 3.9
+conda env create -f $HOME/Desktop/LinuxPlaybook/CondaEnvs/ngs.yml
+conda env create -f $HOME/Desktop/LinuxPlaybook/CondaEnvs/myDjangoEnv.yml
+
+# Software
+
+### Bitwarden
+download deb
+
+### Mendeley
+https://www.mendeley.com/download-desktop-new/#download
+bash 
+### MS Teams
+Download Deb at https://www.microsoft.com/en-us/microsoft-teams/download-app#desktopAppDownloadregion
+
+### Slack
+https://slack.com/intl/en-gb/downloads/
+
+### Snap
+sudo rm /etc/apt/preferences.d/nosnap.pref
+sudo apt update
+sudo apt install snapd
+
+### Remmina
+'''bash
+sudo snap install remmina
+# some features, for example password storage via keyring is missing and must be fixed manually:
+sudo snap connect remmina:avahi-observe :avahi-observe # servers discovery
+sudo snap connect remmina:cups-control :cups-control # printing
+sudo snap connect remmina:mount-observe :mount-observe # mount management
+sudo snap connect remmina:password-manager-service :password-manager-service # password manager
+'''
+
+### Gisto
+sudo snap install gisto
+
+### R
+sudo apt-get update
+sudo apt-get install r-base r-base-dev
+
+### RStudio
+sudo apt-get install gdebi-core
+wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.4.1717-amd64.deb
+sudo gdebi rstudio-server-1.4.1717-amd64.deb
+
+### Sublime Text 4
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+sudo apt-get install apt-transport-https
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+sudo apt-get update
+sudo apt-get install sublime-text
+
+### VS Code
+'''bash
+sudo apt update
+sudo apt install software-properties-common apt-transport-https wget
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+sudo apt update
+sudo apt install code
+
+# Install extensions listed in file
+cd $HOME/Desktop/LinuxPlaybook
+cat vs_code_extensions_list.txt | xargs -n 1 code --install-extension
+'''
+
+!!! Remember to disable biosyntax extension when not in use !!!
 
 # DNA Nexus utilities
 
-dx toolkit
-dx upload agent
+## dx toolkit
+pip3 install dxpy
+Allow tab completion:
+eval "$(register-python-argcomplete dx|sed 's/-o default//')"
 
-# Install Minicondaminiconda
-	ngs
-	djangoDev
+## dx upload agent
+tar -xzf dnanexus-upload-agent-*-linux.tar.gz
+cd dnanexus-upload-agent-*-linux
+alias ua='$HOME/Software/dnanexus-upload-agent-1.5.33-linux/ua' #TODO Add to .bashrc
 
-# Software
-Bitwarden
-Citrix Reciever
-Gisto
-Google Chrome
-Mendeley
-MS Teams
-R
-Remina
-RStudio
-Slack
-Sublime Text
-VS Code
-	broadinstitute.wdl
-	CoenraadS.bracket-pair-colorizer
-	DavidAnson.vscode-markdownlint
-	formulahendry.code-runner
-	kiteco.kite
-	ms-azuretools.vscode-docker
-	ms-python.python
-	ms-python.vscode-pylance
-	ms-toolsai.jupyter
-	ms-vscode-remote.remote-containers
-	ms-vscode-remote.remote-ssh
-	ms-vscode-remote.remote-ssh-edit
-	ms-vscode-remote.remote-wsl
-	ms-vscode-remote.vscode-remote-extensionpack
-	reageyao.biosyntax
-	shardulm94.trailing-spaces
-	timonwong.shellcheck
-	vscodevim.vim
-	yzhang.markdown-all-in-one
+# Bioinformatic tools installed via Bioconda
+conda config --add channels defaults
+conda config --add channels bioconda
+conda config --add channels conda-forge
 
-# Bioinformatic tools
-Samtools
-IGV
-bamtools
-bcftools
-bedtools
-blast
-bowtie2
-bracken
-bwa
-bwa-mem2
-canu
-fastqc
-fastx_toolkit
-kracken2
-minimap2
+conda install samtools
+conda install igv
+conda install bamtools
+conda install bcftools
+conda install bedtools
+conda install blast
+conda install bowtie2
+conda install bracken
+conda install bwa
+conda install bwa-mem
+conda install canu
+conda install fastqc
+conda install fastx_toolkit
+conda install kracken2
+conda install minimap2
+
+

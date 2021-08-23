@@ -1,0 +1,12 @@
+# Download roles from galaxy
+# Google Chrome
+- name: webarchitect609.google_chrome
+# VS Code
+- name: gantsign.visual-studio-code
+- name: gantsign.visual-studio-code-extensions
+# Miniconda
+- name: andrewrothstein.miniconda
+- name: andrewrothstein.conda-env
+# R and RStudio
+- name: andrewrothstein.r
+- name: andrewrothstein.rstudio
