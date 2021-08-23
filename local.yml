@@ -1,7 +1,7 @@
 # Ansible playbook for reinstalling software on to Linux Mint PC
 # Guy's Hospital Bioinformatic Department:
 
-- hosts: localhost
+- hosts: localhost, graeme-workstation
   become: true
   # Install useful Bash utilities
   tasks:
