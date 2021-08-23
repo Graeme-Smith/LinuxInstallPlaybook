@@ -1,9 +1,5 @@
-# Ansible playbook for reinstalling software on to Linux Mint PC
-# Guy's Hospital Bioinformatic Department:
-
-- hosts: localhost, graeme-workstation
+- hosts: localhost
   become: true
-  # Install useful Bash utilities
   tasks:
   - name: Install htop
     apt: name=htop
