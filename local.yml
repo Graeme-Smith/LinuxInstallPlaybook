@@ -1,0 +1,26 @@
+# Ansible playbook for reinstalling software on to Linux Mint PC
+# Guy's Hospital Bioinformatic Department:
+
+- hosts: localhost
+  become: true
+  # Install useful Bash utilities
+  tasks:
+  - name: Install htop
+    apt: name=htop
+  - name: Install bioawk
+    apt: name=bioawk
+  - name: Install docker
+    apt: name=docker
+  - name: Install jq
+    apt: name=jq
+  - name: Install tmux
+    apt: name=tmux
+  - name: Install tree
+    apt: name=tree
+  - name: Install gparted
+    apt: name=gparted
+  - name: Install pavcontrol
+    apt: name=pavcontrol
+  - name: Install python3-pip
+    apt: name=python3-pip
+
