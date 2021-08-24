@@ -5,13 +5,13 @@ Right click and create bootable USB
 
 ### Manual Setup of Ansible and git
 
-'''bash
+```bash
 sudo apt-get install software-properties-common
 sudo apt-add-repository ppa:ansible/ansible
 sudo apt-get update
 sudo apt-get install ansible
 sudo apt-get install git
-'''
+```
 
 # Bash Utilities (Installed via Ansible)
 
@@ -29,10 +29,10 @@ sudo apt-get install git
 
 
 ## Run ansible playbook
-'''bash
+```bash
 ansible-galaxy install -r requirements.yml
 sudo ansible-playbook local.yml
-'''
+```
 
 # Setup profiles
 
@@ -56,10 +56,10 @@ https://docs.conda.io/en/latest/miniconda.html#linux-installers
 bash $HOME/Downloads/Miniconda3-py39_4.10.3-Linux-x86_64.sh
 
 # Import conda environments from yml files TODO Redo these environments for python 3.9
-'''bash
+```bash
 conda env create -f $HOME/Desktop/LinuxPlaybook/CondaEnvs/ngs.yml
 conda env create -f $HOME/Desktop/LinuxPlaybook/CondaEnvs/myDjangoEnv.yml
-'''
+```
 
 # Software
 
@@ -77,51 +77,51 @@ Download Deb at https://www.microsoft.com/en-us/microsoft-teams/download-app#des
 https://slack.com/intl/en-gb/downloads/
 
 ### Snap
-'''bash
+```bash
 sudo rm /etc/apt/preferences.d/nosnap.pref
 sudo apt update
 sudo apt install snapd
-'''
+```
 
 ### Remmina
-'''bash
+```bash
 sudo snap install remmina
 # some features, for example password storage via keyring is missing and must be fixed manually:
 sudo snap connect remmina:avahi-observe :avahi-observe # servers discovery
 sudo snap connect remmina:cups-control :cups-control # printing
 sudo snap connect remmina:mount-observe :mount-observe # mount management
 sudo snap connect remmina:password-manager-service :password-manager-service # password manager
-'''
+```
 
 ### Gisto
-'''bash
+```bash
 sudo snap install gisto
-'''
+```
 
 ### R
-'''bash
+```bash
 sudo apt-get update
 sudo apt-get install r-base r-base-dev
-'''
+```
 
 ### RStudio
-'''bash
+```bash
 sudo apt-get install gdebi-core
 wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.4.1717-amd64.deb
 sudo gdebi rstudio-server-1.4.1717-amd64.deb
-'''
+```
 
 ### Sublime Text 4
-'''bash
+```bash
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 sudo apt-get install apt-transport-https
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 sudo apt-get update
 sudo apt-get install sublime-text
-'''
+```
 
 ### VS Code
-'''bash
+```bash
 sudo apt update
 sudo apt install software-properties-common apt-transport-https wget
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
@@ -132,28 +132,28 @@ sudo apt install code
 # Install extensions listed in file
 cd $HOME/Desktop/LinuxPlaybook
 cat vs_code_extensions_list.txt | xargs -n 1 code --install-extension
-'''
+```
 
 !!! Remember to disable biosyntax extension when not in use !!!
 
 # DNA Nexus utilities
 
 ## dx toolkit
-'''bash
+```bash
 pip3 install dxpy
 Allow tab completion:
 eval "$(register-python-argcomplete dx|sed 's/-o default//')"
-'''
+```
 
 ## dx upload agent
-'''bash
+```bash
 tar -xzf dnanexus-upload-agent-*-linux.tar.gz
 cd dnanexus-upload-agent-*-linux
 alias ua='$HOME/Software/dnanexus-upload-agent-1.5.33-linux/ua' #TODO Add to .bashrc
-'''
+```
 
 # Bioinformatic tools installed via Bioconda
-'''bash
+```bash
 conda config --add channels defaults
 conda config --add channels bioconda
 conda config --add channels conda-forge
@@ -173,5 +173,6 @@ conda install fastqc
 conda install fastx_toolkit
 conda install kracken2
 conda install minimap2
-'''
+```
+
 
