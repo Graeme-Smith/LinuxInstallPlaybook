@@ -1,14 +1,17 @@
 # Install Linux Mint
 Download ISO image
+
 Right click and create bootable USB
 
 ### Manual Setup of Ansible and git
 
+'''bash
 sudo apt-get install software-properties-common
 sudo apt-add-repository ppa:ansible/ansible
 sudo apt-get update
 sudo apt-get install ansible
 sudo apt-get install git
+'''
 
 # Bash Utilities (Installed via Ansible)
 
@@ -26,8 +29,10 @@ sudo apt-get install git
 
 
 ## Run ansible playbook
+'''bash
 ansible-galaxy install -r requirements.yml
 sudo ansible-playbook local.yml
+'''
 
 # Setup profiles
 
@@ -49,9 +54,12 @@ sudo ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/c
 # Install Miniconda
 https://docs.conda.io/en/latest/miniconda.html#linux-installers
 bash $HOME/Downloads/Miniconda3-py39_4.10.3-Linux-x86_64.sh
+
 # Import conda environments from yml files TODO Redo these environments for python 3.9
+'''bash
 conda env create -f $HOME/Desktop/LinuxPlaybook/CondaEnvs/ngs.yml
 conda env create -f $HOME/Desktop/LinuxPlaybook/CondaEnvs/myDjangoEnv.yml
+'''
 
 # Software
 
@@ -61,6 +69,7 @@ download deb
 ### Mendeley
 https://www.mendeley.com/download-desktop-new/#download
 bash 
+
 ### MS Teams
 Download Deb at https://www.microsoft.com/en-us/microsoft-teams/download-app#desktopAppDownloadregion
 
@@ -68,9 +77,11 @@ Download Deb at https://www.microsoft.com/en-us/microsoft-teams/download-app#des
 https://slack.com/intl/en-gb/downloads/
 
 ### Snap
+'''bash
 sudo rm /etc/apt/preferences.d/nosnap.pref
 sudo apt update
 sudo apt install snapd
+'''
 
 ### Remmina
 '''bash
@@ -83,23 +94,31 @@ sudo snap connect remmina:password-manager-service :password-manager-service # p
 '''
 
 ### Gisto
+'''bash
 sudo snap install gisto
+'''
 
 ### R
+'''bash
 sudo apt-get update
 sudo apt-get install r-base r-base-dev
+'''
 
 ### RStudio
+'''bash
 sudo apt-get install gdebi-core
 wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.4.1717-amd64.deb
 sudo gdebi rstudio-server-1.4.1717-amd64.deb
+'''
 
 ### Sublime Text 4
+'''bash
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 sudo apt-get install apt-transport-https
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 sudo apt-get update
 sudo apt-get install sublime-text
+'''
 
 ### VS Code
 '''bash
@@ -120,16 +139,21 @@ cat vs_code_extensions_list.txt | xargs -n 1 code --install-extension
 # DNA Nexus utilities
 
 ## dx toolkit
+'''bash
 pip3 install dxpy
 Allow tab completion:
 eval "$(register-python-argcomplete dx|sed 's/-o default//')"
+'''
 
 ## dx upload agent
+'''bash
 tar -xzf dnanexus-upload-agent-*-linux.tar.gz
 cd dnanexus-upload-agent-*-linux
 alias ua='$HOME/Software/dnanexus-upload-agent-1.5.33-linux/ua' #TODO Add to .bashrc
+'''
 
 # Bioinformatic tools installed via Bioconda
+'''bash
 conda config --add channels defaults
 conda config --add channels bioconda
 conda config --add channels conda-forge
@@ -149,5 +173,5 @@ conda install fastqc
 conda install fastx_toolkit
 conda install kracken2
 conda install minimap2
-
+'''
 
