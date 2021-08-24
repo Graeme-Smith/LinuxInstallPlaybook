@@ -21,7 +21,7 @@ sudo apt-get install git
 |--------------|-------------|--------|
 | docker       |             |        |
 | gparted      | Managing disk partitions            |        |
-| htop      | Managing disk partitions            |        |
+| htop      |             |        |
 | jq           | Parsing JSON files            |        |
 | pavucontrol  |             |        |
 | python3-pip  |             |        |
@@ -39,25 +39,30 @@ sudo ansible-playbook local.yml
 # Setup profiles
 
 ## Setup .bashrc profile
+See file in this repo
 
 ## Setup .vimrc
+See file in this repo
 
-### Current list of manual installation
+# Current list of manual installation
 
-# Google Chrome
+### Google Chrome
 Search for 'download google chrome' and follow instructions
 
-# Citrix Workspace
+### Citrix Workspace
 I downloaded the deb file for Citrix Workspace app 2108 for Linux from https://www.citrix.com/en-gb/downloads/workspace-app/linux/workspace-app-for-linux-latest.html 
 
 For Citrix to work I needed to share the certificates used by FireFox:
+```bash
 sudo ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts
-
-# Install Miniconda
+```
+### Install Miniconda
 https://docs.conda.io/en/latest/miniconda.html#linux-installers
+```bash
 bash $HOME/Downloads/Miniconda3-py39_4.10.3-Linux-x86_64.sh
+```
 
-# Import conda environments from yml files TODO Redo these environments for python 3.9
+### Import conda environments from yml files TODO Redo these environments for python 3.9
 ```bash
 conda env create -f $HOME/Desktop/LinuxPlaybook/CondaEnvs/ngs.yml
 conda env create -f $HOME/Desktop/LinuxPlaybook/CondaEnvs/myDjangoEnv.yml
