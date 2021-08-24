@@ -148,7 +148,7 @@ cat vs_code_extensions_list.txt | xargs -n 1 code --install-extension
 ## dx toolkit
 ```bash
 pip3 install dxpy
-Allow tab completion:
+# Allow tab completion:
 eval "$(register-python-argcomplete dx|sed 's/-o default//')"
 ```
 
