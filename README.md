@@ -3,6 +3,8 @@ Download ISO image
 
 Right click and create bootable USB
 
+Use bootable USB to install Linux Mint
+
 ### Manual Setup of Ansible and git
 
 ```bash
@@ -64,7 +66,7 @@ conda env create -f $HOME/Desktop/LinuxPlaybook/CondaEnvs/myDjangoEnv.yml
 # Software
 
 ### Bitwarden
-download deb
+download deb and install
 
 ### Mendeley
 https://www.mendeley.com/download-desktop-new/#download
@@ -149,7 +151,7 @@ eval "$(register-python-argcomplete dx|sed 's/-o default//')"
 ```bash
 tar -xzf dnanexus-upload-agent-*-linux.tar.gz
 cd dnanexus-upload-agent-*-linux
-alias ua='$HOME/Software/dnanexus-upload-agent-1.5.33-linux/ua' #TODO Add to .bashrc
+alias ua='$HOME/Software/dnanexus-upload-agent-1.5.33-linux/ua' 
 ```
 
 # Bioinformatic tools installed via Bioconda
