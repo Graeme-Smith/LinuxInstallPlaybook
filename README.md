@@ -94,10 +94,12 @@ sudo apt install snapd
 ```bash
 sudo snap install remmina
 # some features, for example password storage via keyring is missing and must be fixed manually:
+sudo snap connect remmina:audio-record :audio-record
 sudo snap connect remmina:avahi-observe :avahi-observe # servers discovery
 sudo snap connect remmina:cups-control :cups-control # printing
 sudo snap connect remmina:mount-observe :mount-observe # mount management
 sudo snap connect remmina:password-manager-service :password-manager-service # password manager
+
 ```
 
 ### Gisto
