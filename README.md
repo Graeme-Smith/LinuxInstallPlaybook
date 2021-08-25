@@ -104,6 +104,7 @@ sudo snap connect remmina:password-manager-service :password-manager-service # p
 ### ngrok
 ```bash
 sudo snap install ngrok
+ngrok authtoken <Auth Token Here>
 ```
 ### Gisto
 ```bash
