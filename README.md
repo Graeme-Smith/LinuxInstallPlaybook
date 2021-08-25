@@ -101,7 +101,10 @@ sudo snap connect remmina:mount-observe :mount-observe # mount management
 sudo snap connect remmina:password-manager-service :password-manager-service # password manager
 
 ```
-
+### ngrok
+```bash
+sudo snap install ngrok
+```
 ### Gisto
 ```bash
 sudo snap install gisto
