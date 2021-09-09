@@ -73,10 +73,6 @@ conda env create -f $HOME/Desktop/LinuxPlaybook/CondaEnvs/myDjangoEnv.yml
 ### Bitwarden
 download deb and install
 
-### Bioawk
-
-git clone git://github.com/lh3/bioawk.git && cd bioawk && make && mv awk bioawk && sudo cp bioawk /usr/local/bin/
-
 ### Mendeley
 https://www.mendeley.com/download-desktop-new/#download
 bash 
@@ -180,6 +176,7 @@ conda install igv
 conda install bamtools
 conda install bcftools
 conda install bedtools
+conda install bioawk
 conda install blast
 conda install bowtie2
 conda install bracken
