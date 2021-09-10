@@ -149,6 +149,10 @@ cat vs_code_extensions_list.txt | xargs -n 1 code --install-extension
 
 !!! Remember to disable biosyntax extension when not in use !!!
 
+### Manual install Bash utilities:
+
+sudo apt-get install git-lfs # An open source Git extension for versioning large files
+
 # DNA Nexus utilities
 
 ## dx toolkit
