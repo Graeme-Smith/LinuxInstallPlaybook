@@ -147,11 +147,18 @@ cd $HOME/Desktop/LinuxPlaybook
 cat vs_code_extensions_list.txt | xargs -n 1 code --install-extension
 ```
 
-# Install GitLens to VS Code
+!!! Remember to disable biosyntax extension when not in use !!!
+
+### Install GitLens to VS Code
 ```
 ext install eamodio.gitlens
 ```
-!!! Remember to disable biosyntax extension when not in use !!!
+### Install Git Graph
+```
+ext install mhutchie.git-graph
+```
+
+Install Gitahead 
 
 ### Manual install Bash utilities:
 
