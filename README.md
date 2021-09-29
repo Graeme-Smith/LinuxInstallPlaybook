@@ -80,6 +80,9 @@ bash
 ### MS Teams
 Download Deb at https://www.microsoft.com/en-us/microsoft-teams/download-app#desktopAppDownloadregion
 
+### Zoom
+https://zoom.us/download
+
 ### Slack
 https://slack.com/intl/en-gb/downloads/
 
