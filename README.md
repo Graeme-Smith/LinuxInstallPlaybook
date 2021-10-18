@@ -114,6 +114,9 @@ ngrok authtoken <Auth Token Here>
 sudo snap install gisto
 ```
 
+### Timeular App
+Add timeular linux app
+
 ### R
 ```bash
 sudo apt-get update
