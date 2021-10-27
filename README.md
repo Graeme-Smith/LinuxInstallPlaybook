@@ -52,6 +52,8 @@ Search for 'download google chrome' and follow instructions
 ### Citrix Workspace
 I downloaded the deb file for Citrix Workspace app 2108 for Linux from https://www.citrix.com/en-gb/downloads/workspace-app/linux/workspace-app-for-linux-latest.html 
 
+WARNING: When configurung the ICAclient during installation I installed it without the app protection as this interfered with other apps such as the Heroku CLI
+
 For Citrix to work I needed to share the certificates used by FireFox:
 ```bash
 sudo ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts
