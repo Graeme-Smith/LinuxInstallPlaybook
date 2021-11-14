@@ -116,6 +116,17 @@ ngrok authtoken <Auth Token Here>
 sudo snap install gisto
 ```
 
+### Install JavaScript
+```bash
+#Install NVM
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+
+# Install NODE
+nvm install node
+nvm install-latest-npm
+npm audit fix
+```
+
 ### Timeular App
 Add timeular linux app
 
@@ -139,6 +150,11 @@ sudo apt-get install apt-transport-https
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 sudo apt-get update
 sudo apt-get install sublime-text
+```
+### Install JavaScript
+```bash
+# Install NVM
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 ```
 
 ### VS Code
