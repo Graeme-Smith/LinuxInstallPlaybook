@@ -69,6 +69,8 @@ bash $HOME/Downloads/Miniconda3-py39_4.10.3-Linux-x86_64.sh
 conda env create -f $HOME/Desktop/LinuxPlaybook/CondaEnvs/ngs.yml
 conda env create -f $HOME/Desktop/LinuxPlaybook/CondaEnvs/myDjangoEnv.yml
 ```
+### Install davmail
+
 
 # Software
 
