@@ -76,8 +76,8 @@ bash $HOME/Downloads/Miniconda3-py39_4.12.0-Linux-x86_64.sh
 ```
 ### Import conda environments from yml files TODO Redo these environments for python 3.9
 ```bash
-conda env create -f $HOME/Desktop/LinuxPlaybook/CondaEnvs/ngs.yml
-conda env create -f $HOME/Desktop/LinuxPlaybook/CondaEnvs/myDjangoEnv.yml
+conda env create -f $HOME/Desktop/LinuxInstallPlaybook/CondaEnvs/ngs.yml
+conda env create -f $HOME/Desktop/LinuxInstallPlaybook/CondaEnvs/myDjangoEnv.yml
 ```
 ### Install davmail
 
