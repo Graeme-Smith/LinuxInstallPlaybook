@@ -158,18 +158,12 @@ wget https://download2.rstudio.org/server/jammy/amd64/rstudio-server-2022.07.1-5
 sudo gdebi rstudio-server-2022.07.1-554-amd64.deb
 ```
 
-### Sublime Text 4
+### Sublime Text
 ```bash
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-sudo apt-get install apt-transport-https
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/sublimehq-archive.gpg
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 sudo apt-get update
 sudo apt-get install sublime-text
-```
-### Install JavaScript
-```bash
-# Install NVM
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 ```
 
 ### VS Code
