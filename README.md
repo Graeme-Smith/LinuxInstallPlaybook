@@ -97,14 +97,16 @@ Download Deb at https://www.microsoft.com/en-us/microsoft-teams/download-app#des
 ### Zoom
 https://zoom.us/download
 
-### Slack
-https://slack.com/intl/en-gb/downloads/
-
 ### Snap
 ```bash
 sudo rm /etc/apt/preferences.d/nosnap.pref
 sudo apt update
 sudo apt install snapd
+```
+
+### Slack
+```bash
+sudo snap install slack --classic
 ```
 
 ### Remmina
@@ -116,7 +118,6 @@ sudo snap connect remmina:avahi-observe :avahi-observe # servers discovery
 sudo snap connect remmina:cups-control :cups-control # printing
 sudo snap connect remmina:mount-observe :mount-observe # mount management
 sudo snap connect remmina:password-manager-service :password-manager-service # password manager
-
 ```
 ### ngrok
 ```bash
