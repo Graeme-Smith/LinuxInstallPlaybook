@@ -137,7 +137,8 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 # Install NODE
 nvm install node
 nvm install-latest-npm
-npm audit fix
+npm cache clean --force
+npm audit fix --force
 ```
 
 ### Timeular App
