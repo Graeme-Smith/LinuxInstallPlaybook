@@ -15,6 +15,13 @@ sudo apt-get install ansible
 sudo apt-get install git
 ```
 
+### Clone github repo
+
+```bash
+cd Desktop/
+git clone https://github.com/Graeme-Smith/LinuxInstallPlaybook.git
+```
+
 # Bash Utilities (Installed via Ansible)
 
 | Bash Utility | Description | Status |
