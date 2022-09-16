@@ -142,7 +142,7 @@ npm audit fix --force
 ```
 
 ### Timeular App
-Download [Add timeular linux app](https://timeular.com/download/) make the Appimage executable, and copy to Desktop.
+Download https://timeular.com/download/ make the Appimage executable, and copy to Desktop.
 
 
 ### R
