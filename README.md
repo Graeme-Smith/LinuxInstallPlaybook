@@ -61,7 +61,7 @@ mv $HOME/Desktop/LinuxInstallPlaybook/.vimrc $HOME
 Search for 'download google chrome' and follow instructions
 
 ### Citrix Workspace
-I downloaded the deb file for Citrix Workspace app 2108 for Linux from https://www.citrix.com/en-gb/downloads/workspace-app/linux/workspace-app-for-linux-latest.html 
+I downloaded the latest deb file for Citrix Workspace app for Linux from [https://www.citrix.com/en-gb/downloads/workspace-app/linux/workspace-app-for-linux-latest.html ](https://www.citrix.com/en-gb/downloads/workspace-app/legacy-workspace-app-for-linux/workspace-app-for-linux-latest2.html)
 
 WARNING: When configurung the ICAclient during installation I installed it without the app protection as this interfered with other apps such as the Heroku CLI
 
