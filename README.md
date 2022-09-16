@@ -176,7 +176,7 @@ sudo apt update
 sudo apt install code
 
 # Install extensions listed in file
-cd $HOME/Desktop/LinuxPlaybook
+cd $HOME/Desktop/LinuxInstallPlaybook
 cat vs_code_extensions_list.txt | xargs -n 1 code --install-extension
 ```
 
