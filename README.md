@@ -80,7 +80,10 @@ conda env create -f $HOME/Desktop/LinuxInstallPlaybook/CondaEnvs/ngs.yml
 conda env create -f $HOME/Desktop/LinuxInstallPlaybook/CondaEnvs/myDjangoEnv.yml
 ```
 ### Install davmail
-
+```bash
+sudo apt update
+sudo apt install davmail
+```
 
 # Software
 
