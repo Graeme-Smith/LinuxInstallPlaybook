@@ -191,8 +191,6 @@ ext install eamodio.gitlens
 ext install mhutchie.git-graph
 ```
 
-Install Gitahead 
-
 # DNA Nexus utilities
 
 ## dx toolkit
