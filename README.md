@@ -87,9 +87,6 @@ sudo apt install davmail
 
 # Software
 
-### Bitwarden
-download deb and install
-
 ### Mendeley
 https://www.mendeley.com/download-desktop-new/#download
 bash 
