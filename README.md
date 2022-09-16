@@ -72,9 +72,8 @@ sudo ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/c
 ### Install Miniconda
 https://docs.conda.io/en/latest/miniconda.html#linux-installers
 ```bash
-bash $HOME/Downloads/Miniconda3-py39_4.10.3-Linux-x86_64.sh
+bash $HOME/Downloads/Miniconda3-py39_4.12.0-Linux-x86_64.sh
 ```
-
 ### Import conda environments from yml files TODO Redo these environments for python 3.9
 ```bash
 conda env create -f $HOME/Desktop/LinuxPlaybook/CondaEnvs/ngs.yml
