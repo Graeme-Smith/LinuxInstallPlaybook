@@ -202,8 +202,9 @@ eval "$(register-python-argcomplete dx|sed 's/-o default//')"
 
 ## dx upload agent
 ```bash
-tar -xzf dnanexus-upload-agent-*-linux.tar.gz
-cd dnanexus-upload-agent-*-linux
+cd $HOME/Downloads
+wget https://dnanexus-sdk.s3.amazonaws.com/dnanexus-upload-agent-1.5.33-linux.tar.gz -O - | tar -xzf -
+mv dnanexus-upload-agent-*-linux $HOME/Software/
 alias ua='$HOME/Software/dnanexus-upload-agent-1.5.33-linux/ua' 
 ```
 
