@@ -154,8 +154,8 @@ sudo apt-get install r-base r-base-dev
 ### RStudio
 ```bash
 sudo apt-get install gdebi-core
-wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.4.1717-amd64.deb
-sudo gdebi rstudio-server-1.4.1717-amd64.deb
+wget https://download2.rstudio.org/server/jammy/amd64/rstudio-server-2022.07.1-554-amd64.deb
+sudo gdebi rstudio-server-2022.07.1-554-amd64.deb
 ```
 
 ### Sublime Text 4
