@@ -88,8 +88,8 @@ sudo apt install davmail
 # Software
 
 ### Mendeley
-https://www.mendeley.com/download-desktop-new/#download
-bash 
+Download https://www.mendeley.com/download-desktop-new/#download make the Appimage executable, and copy to Desktop.
+
 
 ### MS Teams
 Download Deb at https://www.microsoft.com/en-us/microsoft-teams/download-app#desktopAppDownloadregion
