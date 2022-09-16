@@ -46,10 +46,14 @@ sudo ansible-playbook local.yml
 # Setup profiles
 
 ## Setup .bashrc profile
+'''bash
 mv $HOME/Desktop/LinuxInstallPlaybook/.bashrc $HOME
+'''
 
 ## Setup .vimrc
+'''bash
 mv $HOME/Desktop/LinuxInstallPlaybook/.vimrc $HOME
+'''
 
 # Current list of manual installation
 
