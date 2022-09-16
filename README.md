@@ -193,10 +193,6 @@ ext install mhutchie.git-graph
 
 Install Gitahead 
 
-### Manual install Bash utilities:
-
-sudo apt-get install git-lfs # An open source Git extension for versioning large files
-
 # DNA Nexus utilities
 
 ## dx toolkit
