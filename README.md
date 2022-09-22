@@ -191,6 +191,18 @@ ext install eamodio.gitlens
 ext install mhutchie.git-graph
 ```
 
+# Setup GitHub
+
+Follow the instructions at https://docs.github.com/en/authentication/connecting-to-github-with-ssh
+* Generate SSH key if required
+* Add key to Github
+
+Add user email and user name
+```
+git config --global user.email "<email-address>"
+git config --global user.name "Graeme-Smith"
+```
+
 # DNA Nexus utilities
 
 ## dx toolkit
