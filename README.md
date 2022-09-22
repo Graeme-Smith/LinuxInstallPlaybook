@@ -198,9 +198,13 @@ Follow the instructions at https://docs.github.com/en/authentication/connecting-
 * Add key to Github
 
 Add user email and user name
-```
+```bash
 git config --global user.email "<email-address>"
 git config --global user.name "Graeme-Smith"
+```
+Set LinuxInstallPlaybook repo to use ssh
+```bash
+git remote set-url origin git@github.com:Graeme-Smith/LinuxInstallPlaybook.git
 ```
 
 # DNA Nexus utilities
